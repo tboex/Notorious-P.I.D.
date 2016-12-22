@@ -26,11 +26,9 @@ WIP 3) store those lyrics after sanitizing.
 
 copy data and encode with rhyme algorithm
 sort rhymes with directory structure
-    meter -> end rhyme sound
+    meter -> end rhyme sound -> Subject Matter?
 
 --------------------------------------------------------------------------
-
-Prompt for Rhyme scheme and first line, 
 '''
 def fiveSpace(lyricList):
     counter = 0
@@ -76,7 +74,7 @@ def fetchLyrics(songUrl):
         lyrics = lyric.getText()
     lineList = lyrics.splitlines()
     lineList = [x.encode('UTF8') for x in lineList]
-
+    print lineList
     print sanitizeLyrics(lineList)
 
     return sanitizeLyrics(lineList)
@@ -92,3 +90,4 @@ def fetchArtists(artistUrl):
     return urlList
 #fetchArtists(fullList)
 fetchLyrics(songTest2)
+#fetchLyrics(songTest)
